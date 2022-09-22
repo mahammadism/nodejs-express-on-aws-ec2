@@ -16,3 +16,8 @@ hooks:
     - location: scripts/application_start.sh
       timeout: 300
       runas: ec2-user
+  StartNewPipelinie:
+    - location: scripts/start_new_pipeline.sh
+      timeout: 300
+      runas: ec2-user
+
