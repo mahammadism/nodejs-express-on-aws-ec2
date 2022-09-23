@@ -1,6 +1,6 @@
 #!/bin/bash
 STATUS="$(aws codepipeline list-pipeline-executions --pipeline-name ismail --region ap-southeast-2 | grep '"status": "Succeeded"' | sort -u)"
-output=("status": "Succeeded",)
+OUTPUT='("status": "Succeeded",)'
 if [[ "${STATUS}"="${OUTPUT}" ]]; then
     aws codepipeline start-pipeline-execution --name nodejs-express-on-aws-ec2-1 --region ap-southeast-2
 else
